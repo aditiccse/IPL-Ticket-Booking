@@ -1,0 +1,335 @@
+
+/* ==============================
+   IPL 2026 TICKET BOOKING WEBSITE
+   Activity 2 - CSS Styling
+================================ */
+
+/* 1. CSS Variables */
+:root {
+    --primary: #781f35;
+    --primary-dark: #511326;
+    --accent: #e9a17b;
+    --background: #fff8ef;
+    --card: #ffffff;
+    --text: #35252a;
+    --muted: #765e62;
+    --border: #eadbd3;
+}
+
+/* 2. General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+section {
+    padding: 55px 8%;
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* 3. Navigation Bar */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 16px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h2 {
+    color: white;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* 4. Hero Section */
+#home {
+    min-height: 380px;
+    background: linear-gradient(
+        135deg,
+        var(--primary-dark),
+        var(--primary),
+        #a34b50
+    );
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+#home a {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--primary-dark);
+    text-decoration: none;
+    padding: 11px 22px;
+    margin: 6px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#home a:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+/* 5. About Section */
+#about {
+    background-color: var(--background);
+}
+
+#about ul {
+    margin: 12px 0 20px 25px;
+}
+
+#about li {
+    padding: 4px 0;
+}
+
+/* 6. Match Schedule */
+#matches {
+    background-color: #f9eee5;
+}
+
+#matches label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#teamFilter {
+    padding: 9px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+    padding: 13px 10px;
+    text-align: center;
+}
+
+td {
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+tr:hover {
+    background-color: #fff1e8;
+}
+
+td a {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--primary-dark);
+    text-decoration: none;
+    padding: 6px 13px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+td a:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* 7. Booking Section */
+#booking {
+    background-color: var(--background);
+}
+
+#booking form,
+#booking aside {
+    background-color: var(--card);
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(80, 30, 40, 0.08);
+}
+
+#booking label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 5px;
+}
+
+#booking input,
+#booking select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+#booking button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin-top: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#booking button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Booking Form and Summary Layout */
+#booking > form,
+#booking > aside {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+}
+
+#booking > aside {
+    margin-left: 2%;
+}
+
+#booking aside h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* 8. My Bookings Section */
+#mybookings {
+    background-color: #f9eee5;
+}
+
+/* 9. Guidelines Cards */
+#guidelines {
+    background-color: var(--background);
+}
+
+#guidelines article {
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+    min-height: 155px;
+    background-color: white;
+    padding: 20px;
+    margin: 1%;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    box-shadow: 0 3px 10px rgba(80, 30, 40, 0.08);
+}
+
+#guidelines article h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* 10. Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* 11. Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #home h1 {
+        font-size: 28px;
+    }
+
+    #booking > form,
+    #booking > aside {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    #guidelines article {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    #matches {
+        overflow-x: auto;
+    }
+
+    #matches table {
+        min-width: 750px;
+    }
+}
