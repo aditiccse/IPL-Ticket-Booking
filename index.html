@@ -11,9 +11,9 @@
 <body>
 
     <!-- Navigation Bar -->
-    <header>
+    <header class="navbar">
         <h2>IPL 2026</h2>
-
+<button id="menuToggle" class="menu-toggle">☰</button>
         <nav>
             <a href="#matches">Matches</a> 
             <a href="booking.html">Book Ticket</a>
@@ -77,8 +77,13 @@
                 <option value="RCB">Royal Challengers Bengaluru</option>
                 <option value="KKR">Kolkata Knight Riders</option>
             </select>
+<br><br>
 
-            <table border="1" cellpadding="10">
+<button id="gridView">Grid View</button>
+<button id="listView">List View</button>
+
+<br><br>
+            <table class="match-grid">`
                 <thead>
                     <tr>
                         <th>Match Number</th>
@@ -234,6 +239,8 @@
         <section id="guidelines">
             <h2>Stadium Guidelines</h2>
 
+            <div class="guidelines-grid">
+
             <article>
                 <h3>Ticket Verification</h3>
                 <p>
@@ -258,6 +265,7 @@
                     the stadium.
                 </p>
             </article>
+            </div>
         </section>
 
     </main>

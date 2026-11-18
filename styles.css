@@ -346,3 +346,107 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
+/* Activity 8 - Flexbox Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Activity 8 - Guidelines Grid */
+
+.guidelines-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+#guidelines .guidelines-grid article {
+    width: auto;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Activity 8 - Match Schedule Grid */
+
+#matches .match-grid {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+
+#matches .match-grid thead {
+    display: none;
+}
+
+#matches .match-grid tbody {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#matches .match-grid tr {
+    display: block;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(80, 30, 40, 0.08);
+}
+
+#matches .match-grid td {
+    display: block;
+    border: none;
+    padding: 8px 0;
+}
+
+/* Activity 8 - Responsive Match Grid */
+
+@media (max-width: 900px) {
+    #matches .match-grid tbody {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    #matches .match-grid tbody {
+        grid-template-columns: 1fr;
+    }
+
+    #matches table {
+        min-width: 0;
+        width: 100%;
+    }
+}
+/* Activity 8 - List View */
+
+#matches .match-grid.list-view tbody {
+    grid-template-columns: 1fr;
+}
+/* Activity 8 - Hamburger Menu */
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .navbar nav {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar nav.active {
+        display: flex;
+    }
+        .guidelines-grid {
+        grid-template-columns: 1fr;
+    }
+}
